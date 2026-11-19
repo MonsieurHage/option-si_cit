@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Option SI / CIT en Seconde — Institution Saint Jean Douai</title>
+<meta name="description" content="Présentation interactive de l'option Sciences de l'Ingénieur et Création et Innovation Technologique en classe de seconde à l'Institution Saint Jean de Douai.">
+<meta name="theme-color" content="#0B1B3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#deck">Aller au contenu</a>
+
+<header class="topbar" id="topbar">
+  <a class="brand" href="#/1" aria-label="Saint Jean — retour à l’accueil">
+    <span class="brand__plate brand__plate--header">
+      <img src="assets/brand/logo-couleur.webp" width="474" height="437" alt="Saint Jean Douai — Cultivons l’épanouissement">
+    </span>
+  </a>
+
+  <div class="topbar__chapter" aria-hidden="true">
+    <span class="topbar__dot"></span>
+    <span id="chapterLabel">Accueil</span>
+  </div>
+
+  <div class="topbar__actions">
+    <button class="iconbtn" id="btnHelp" type="button" aria-label="Aide et raccourcis clavier" title="Aide (?)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.2 1-1.2 1.9"/><circle cx="12" cy="17.3" r=".9" fill="currentColor" stroke="none"/></svg>
+    </button>
+    <button class="iconbtn" id="btnMenu" type="button" aria-label="Ouvrir le sommaire" title="Sommaire (M)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <button class="iconbtn" id="btnFull" type="button" aria-label="Passer en plein écran" title="Plein écran (F)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+</header>
+
+<main class="deck" id="deck" tabindex="-1">
+
+  <!-- 1 — COUVERTURE -->
+  <section class="slide slide--cover" data-chapter="Accueil" data-theme="dark">
+    <div class="cover__bg" aria-hidden="true">
+      <img src="assets/img/hero.jpg" alt="">
+      <div class="cover__veil"></div>
+    </div>
+
+    <div class="arcs arcs--cover" aria-hidden="true">
+      <svg viewBox="0 0 600 600" fill="none">
+        <g stroke-linecap="round">
+          <circle cx="300" cy="300" r="270" stroke="#2C5BD0" stroke-width="7" stroke-dasharray="640 200" transform="rotate(150 300 300)"/>
+          <circle cx="300" cy="300" r="225" stroke="#7B3FB0" stroke-width="7" stroke-dasharray="560 260" transform="rotate(150 300 300)"/>
+          <circle cx="300" cy="300" r="180" stroke="#3FA24B" stroke-width="7" stroke-dasharray="460 260" transform="rotate(150 300 300)"/>
+          <circle cx="300" cy="300" r="135" stroke="#24ADA3" stroke-width="7" stroke-dasharray="360 220" transform="rotate(150 300 300)"/>
+          <circle cx="300" cy="300" r="250" stroke="#F07C22" stroke-width="7" stroke-dasharray="300 500" transform="rotate(-25 300 300)"/>
+          <circle cx="300" cy="300" r="295" stroke="#F2B841" stroke-width="7" stroke-dasharray="260 540" transform="rotate(-25 300 300)"/>
+          <circle cx="300" cy="300" r="320" stroke="#EE7FA5" stroke-width="7" stroke-dasharray="200 560" transform="rotate(-25 300 300)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="slide__inner cover">
+      <div class="cover__copy">
+        <p class="eyebrow reveal" style="--d:0"><span class="eyebrow__dot"></span>Institution Saint Jean · Douai</p>
+
+        <h1 class="cover__title reveal" style="--d:1">
+          Sciences de l'Ingénieur<br>
+          <span class="amp">&amp;</span> Création et Innovation<br>
+          Technologique
+        </h1>
+
+        <p class="cover__lead reveal" style="--d:2">
+          L'option <strong>SI / CIT</strong> en classe de seconde.
+          <em>1 h 30 par semaine</em> pour comprendre, imaginer et fabriquer.
+        </p>
+
+        <div class="cover__cta reveal" style="--d:3">
+          <a class="btn btn--primary" href="#/2">
+            Découvrir l'option
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="hint">Navigue avec les flèches <kbd>←</kbd> <kbd>→</kbd></span>
+        </div>
+
+      </div>
+
+      <aside class="cover__card reveal" style="--d:3" aria-label="L'option en bref">
+        <div class="cover__card-top">
+          <span>L'option en bref</span>
+        </div>
+        <dl class="facts">
+          <div><dt>Niveau</dt><dd>Seconde générale et technologique</dd></div>
+          <div><dt>Volume</dt><dd>1 h 30 par semaine</dd></div>
+          <div><dt>Format</dt><dd>Projets et travaux pratiques en équipe</dd></div>
+          <div><dt>Profil</dt><dd>Curieux, créatif, manuel… ou tout à la fois</dd></div>
+        </dl>
+        <p class="cover__card-note">Un enseignement optionnel de découverte, sans prérequis.</p>
+      </aside>
+    </div>
+
+  </section>
+
+  <!-- 2 — DEUX REGARDS -->
+  <section class="slide" data-chapter="Deux regards" data-theme="light" data-tint="#163A8A">
+    <div class="slide__inner">
+      <header class="head reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Deux approches complémentaires</p>
+        <h2>Comprendre le monde,<br><span class="serif">puis le réinventer.</span></h2>
+      </header>
+
+      <div class="duo">
+        <article class="panel panel--si reveal" style="--d:1">
+          <div class="panel__head">
+            <span class="panel__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M4.2 7.5l2.6 1.5M17.2 15l2.6 1.5M4.2 16.5l2.6-1.5M17.2 9l2.6-1.5"/><circle cx="12" cy="12" r="4.2"/></svg>
+            </span>
+            <div>
+              <p class="panel__kicker">SI</p>
+              <h3>Sciences de l'Ingénieur</h3>
+            </div>
+          </div>
+          <p class="panel__text">Décoder le fonctionnement des systèmes techniques du quotidien : un vélo à assistance électrique, un robot, un objet connecté…</p>
+          <ul class="chips" aria-label="Les gestes de l'ingénieur">
+            <li>Analyser</li><li>Modéliser</li><li>Simuler</li><li>Programmer</li>
+          </ul>
+          <p class="panel__tag">Comprendre <em>comment ça marche</em>.</p>
+        </article>
+
+        <article class="panel panel--cit reveal" style="--d:2">
+          <div class="panel__head">
+            <span class="panel__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg>
+            </span>
+            <div>
+              <p class="panel__kicker">CIT</p>
+              <h3>Création et Innovation Technologique</h3>
+            </div>
+          </div>
+          <p class="panel__text">Partir d'un besoin réel et imaginer une réponse : observer, explorer, concevoir, prototyper, tester… puis améliorer.</p>
+          <ul class="chips" aria-label="Les gestes de la création">
+            <li>Observer</li><li>Imaginer</li><li>Concevoir</li><li>Prototyper</li>
+          </ul>
+          <p class="panel__tag">Inventer <em>ce qui n'existe pas encore</em>.</p>
+        </article>
+      </div>
+
+      <p class="footnote reveal" style="--d:3">Deux entrées, une même démarche : celle de l'ingénieur.</p>
+    </div>
+  </section>
+
+  <!-- 3 — LE FORMAT -->
+  <section class="slide" data-chapter="Le format" data-theme="light" data-tint="#1FA79B">
+    <div class="slide__inner">
+      <div class="format">
+        <div class="format__left">
+          <p class="eyebrow reveal" style="--d:0"><span class="eyebrow__dot"></span>Le format</p>
+          <h2 class="reveal" style="--d:1">1 h 30<br><span class="serif">par semaine,</span><br>autrement.</h2>
+          <p class="lead reveal" style="--d:2">Un temps dédié pour manipuler, tester, se tromper et recommencer. Loin d'un cours magistral.</p>
+
+          <div class="ring reveal" style="--d:3" aria-hidden="true">
+            <svg viewBox="0 0 220 220">
+              <circle class="ring__track" cx="110" cy="110" r="92"/>
+              <circle class="ring__value" cx="110" cy="110" r="92"/>
+            </svg>
+            <div class="ring__label"><strong>90</strong><span>minutes</span></div>
+          </div>
+        </div>
+
+        <ul class="facts-list">
+          <li class="reveal" style="--d:2">
+            <span class="facts-list__num">01</span>
+            <div><h3>Des travaux pratiques</h3><p>On observe, on mesure et on confronte ses idées aux résultats.</p></div>
+          </li>
+          <li class="reveal" style="--d:3">
+            <span class="facts-list__num">02</span>
+            <div><h3>Une pédagogie de projet</h3><p>On apprend en faisant : une équipe, un besoin, un prototype à concevoir.</p></div>
+          </li>
+          <li class="reveal" style="--d:4">
+            <span class="facts-list__num">03</span>
+            <div><h3>Aucun prérequis</h3><p>Ni programmation, ni dessin technique : tout s'apprend dans le projet.</p></div>
+          </li>
+          <li class="reveal" style="--d:5">
+            <span class="facts-list__num">04</span>
+            <div><h3>Le droit d'essayer</h3><p>Un prototype qui rate, c'est une étape. On analyse, on corrige, on recommence.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 — SI -->
+  <section class="slide" data-chapter="Sciences de l'ingénieur" data-theme="light" data-tint="#2C5BD0">
+    <div class="slide__inner">
+      <header class="head reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Sciences de l'Ingénieur</p>
+        <h2>Dans la peau<br><span class="serif">d'un ingénieur.</span></h2>
+      </header>
+
+      <div class="mission">
+        <div class="mission__body">
+          <div class="tabs" role="tablist" aria-label="Les quatre missions de l'ingénieur">
+            <button class="tab is-selected" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true" data-tab="0">Analyser</button>
+            <button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" tabindex="-1" data-tab="1">Modéliser</button>
+            <button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-tab="2">Simuler</button>
+            <button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-tab="3">Programmer</button>
+          </div>
+
+          <div class="tabpanels">
+            <div class="tabpanel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+              <p class="tabpanel__num">01</p>
+              <h3>Comprendre avant de transformer</h3>
+              <p>On démonte, on observe, on mesure. On identifie la fonction de chaque pièce et les solutions techniques choisies par les concepteurs.</p>
+              <p class="tabpanel__ex"><span>Exemple</span> Pourquoi un robot aspirateur ralentit-il à l'approche d'un mur ?</p>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+              <p class="tabpanel__num">02</p>
+              <h3>Représenter le réel en 3D</h3>
+              <p>On dessine la pièce, l'assemblage, le mécanisme. Le modèle numérique permet de vérifier les formes et de préparer la fabrication.</p>
+              <p class="tabpanel__ex"><span>Exemple</span> Modéliser le châssis d'un mini-robot pour l'adapter à un nouveau capteur.</p>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+              <p class="tabpanel__num">03</p>
+              <h3>Tester avant de fabriquer</h3>
+              <p>On simule les efforts, les mouvements ou la consommation d'énergie. On anticipe les performances pour faire les bons choix.</p>
+              <p class="tabpanel__ex"><span>Exemple</span> Vérifier qu'une pièce résiste avant de l'envoyer à l'impression 3D.</p>
+            </div>
+            <div class="tabpanel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+              <p class="tabpanel__num">04</p>
+              <h3>Donner vie à l'objet</h3>
+              <p>Capteurs, actionneurs, code : on programme le comportement du système et on le fait interagir avec son environnement.</p>
+              <p class="tabpanel__ex"><span>Exemple</span> Programmer un capteur de distance couplé à un moteur pour éviter un obstacle.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="mission__media reveal" style="--d:2">
+          <img src="assets/img/si.jpg" alt="Des lycéens équipés de lunettes de protection travaillent sur un système robotisé." loading="lazy">
+          <figcaption>Observer, mesurer, comprendre — puis proposer.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 — CIT -->
+  <section class="slide" data-chapter="Création & innovation" data-theme="light" data-tint="#7B3FB0">
+    <div class="slide__inner">
+      <header class="head reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Création et Innovation Technologique</p>
+        <h2>De l'idée<br><span class="serif">au prototype.</span></h2>
+      </header>
+
+      <div class="process reveal" style="--d:1">
+        <ol class="stepper" aria-label="Les étapes de la démarche de projet">
+          <li><button class="step is-active" type="button" data-step="0"><span>1</span>Besoin</button></li>
+          <li><button class="step" type="button" data-step="1"><span>2</span>Explorer</button></li>
+          <li><button class="step" type="button" data-step="2"><span>3</span>Imaginer</button></li>
+          <li><button class="step" type="button" data-step="3"><span>4</span>Concevoir</button></li>
+          <li><button class="step" type="button" data-step="4"><span>5</span>Prototyper</button></li>
+        </ol>
+
+        <div class="process__panel" aria-live="polite">
+          <article class="stage is-active" data-stage="0">
+            <p class="stage__num">Étape 01</p>
+            <h3>Un besoin, un vrai</h3>
+            <p>Tout part d'une situation concrète : un objet qui n'existe pas, un usage à améliorer, un problème du quotidien. On observe les utilisateurs et on formule le besoin.</p>
+            <p class="stage__key">La question de départ : <em>pour qui, et pour quoi faire ?</em></p>
+          </article>
+          <article class="stage" data-stage="1" hidden>
+            <p class="stage__num">Étape 02</p>
+            <h3>Explorer l'existant</h3>
+            <p>On compare les solutions déjà sur le marché, on mesure, on démonte. On repère ce qui fonctionne… et ce qui mérite d'être réinventé.</p>
+            <p class="stage__key">La question : <em>comment font les autres ?</em></p>
+          </article>
+          <article class="stage" data-stage="2" hidden>
+            <p class="stage__num">Étape 03</p>
+            <h3>Produire des idées</h3>
+            <p>Croquis, nuages de mots, maquettes rapides : on ose, on compare, on sélectionne. La créativité se travaille, elle ne tombe pas du ciel.</p>
+            <p class="stage__key">La règle : <em>beaucoup d'idées, puis un choix argumenté.</em></p>
+          </article>
+          <article class="stage" data-stage="3" hidden>
+            <p class="stage__num">Étape 04</p>
+            <h3>Concevoir et dimensionner</h3>
+            <p>On dessine la solution en 3D, on choisit les matériaux et les composants, on vérifie les contraintes techniques, économiques et environnementales.</p>
+            <p class="stage__key">L'objectif : <em>une solution réaliste, pas seulement séduisante.</em></p>
+          </article>
+          <article class="stage" data-stage="4" hidden>
+            <p class="stage__num">Étape 05</p>
+            <h3>Fabriquer, tester, améliorer</h3>
+            <p>Impression 3D, découpe, électronique : le prototype prend forme. On le teste, on note les écarts, on corrige. C'est ça, innover.</p>
+            <p class="stage__key">La devise : <em>essayer, mesurer, recommencer.</em></p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 — PROJETS -->
+  <section class="slide" data-chapter="Projets" data-theme="light" data-tint="#F07C22">
+    <div class="slide__inner">
+      <header class="head reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Concrètement</p>
+        <h2>Des projets<br><span class="serif">qui ont du sens.</span></h2>
+      </header>
+
+      <div class="projects">
+        <article class="project reveal" style="--d:1">
+          <div class="project__media"><img src="assets/img/equipe.jpg" alt="Trois lycéens assemblent un robot en atelier." loading="lazy"></div>
+          <div class="project__body">
+            <p class="project__tag">SI + CIT</p>
+            <h3>Le robot qui suit sa ligne</h3>
+            <p>Capteurs, moteurs, programme : concevoir et régler un robot capable de suivre un parcours sans intervention.</p>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d:2">
+          <div class="project__media"><img src="assets/img/impression.jpg" alt="Tête d'imprimante 3D en train d'imprimer une pièce." loading="lazy"></div>
+          <div class="project__body">
+            <p class="project__tag">CIT</p>
+            <h3>L'objet utile, pensé pour quelqu'un</h3>
+            <p>Une boîte qui rappelle de boire, un support sur mesure, un capteur de qualité d'air : partir d'un usage réel.</p>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--d:3">
+          <div class="project__media"><img src="assets/img/fablab.jpg" alt="Un élève présente une pièce fabriquée en impression 3D." loading="lazy"></div>
+          <div class="project__body">
+            <p class="project__tag">SI + CIT</p>
+            <h3>Le prototype écoresponsable</h3>
+            <p>Réduire la matière, recycler, réparer : intégrer les contraintes environnementales dès la conception.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="footnote reveal" style="--d:4">Exemples de projets possibles. Les photos sont des illustrations, pas des photos de l’établissement.</p>
+    </div>
+  </section>
+
+  <!-- 7 — FABLAB -->
+  <section class="slide" data-chapter="Le Fablab" data-theme="light" data-tint="#3FA24B">
+    <div class="slide__inner">
+      <div class="lab">
+        <div class="lab__intro">
+          <p class="eyebrow reveal" style="--d:0"><span class="eyebrow__dot"></span>Le laboratoire</p>
+          <h2 class="reveal" style="--d:1">Du virtuel<br><span class="serif">au réel.</span></h2>
+          <p class="lead reveal" style="--d:2">Un espace pour concevoir sur écran… et fabriquer avec ses mains. Les outils se découvrent au fil des projets.</p>
+
+          <figure class="lab__media reveal" style="--d:3">
+            <img src="assets/img/fablab.jpg" alt="Un élève tient une pièce fabriquée à l'imprimante 3D, dans un atelier de fabrication numérique." loading="lazy">
+            <figcaption><span class="dot"></span>Prototype imprimé en 3D</figcaption>
+          </figure>
+        </div>
+
+        <div class="tools reveal" style="--d:2">
+          <article class="tool is-open">
+            <button class="tool__head" type="button" aria-expanded="true">
+              <span class="tool__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h12l-1.2 9H7.2L6 9Z"/><path d="M9 9V6.5A3 3 0 0 1 15 6.5V9"/><path d="M8 5h8"/></svg>
+              </span>
+              <span class="tool__title">Impression 3D</span>
+              <span class="tool__plus" aria-hidden="true"></span>
+            </button>
+            <div class="tool__body"><p>Transformer un modèle numérique en objet réel, couche après couche. Idéal pour tester une forme rapidement.</p></div>
+          </article>
+
+          <article class="tool">
+            <button class="tool__head" type="button" aria-expanded="false">
+              <span class="tool__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <span class="tool__title">Découpe laser</span>
+              <span class="tool__plus" aria-hidden="true"></span>
+            </button>
+            <div class="tool__body" hidden><p>Découper et graver des matériaux avec précision, à partir d'un dessin vectoriel préparé en CAO.</p></div>
+          </article>
+
+          <article class="tool">
+            <button class="tool__head" type="button" aria-expanded="false">
+              <span class="tool__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg>
+              </span>
+              <span class="tool__title">Électronique &amp; Arduino</span>
+              <span class="tool__plus" aria-hidden="true"></span>
+            </button>
+            <div class="tool__body" hidden><p>Brancher des capteurs et des actionneurs, puis écrire le programme qui donne vie au prototype.</p></div>
+          </article>
+
+          <article class="tool">
+            <button class="tool__head" type="button" aria-expanded="false">
+              <span class="tool__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5 10.5 4 20 20 4 17.5Z"/><path d="M4 17.5 12 13l8 7"/></svg>
+              </span>
+              <span class="tool__title">Conception assistée par ordinateur</span>
+              <span class="tool__plus" aria-hidden="true"></span>
+            </button>
+            <div class="tool__body" hidden><p>Dessiner en 3D, assembler, simuler : le poste où l'idée devient un objet virtuel manipulable.</p></div>
+          </article>
+
+          <p class="tools__note">Selon les équipements et les projets de l'année.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 — COMPÉTENCES -->
+  <section class="slide" data-chapter="Compétences" data-theme="light" data-tint="#EE7FA5">
+    <div class="slide__inner">
+      <div class="skills">
+        <div class="skills__intro">
+          <p class="eyebrow reveal" style="--d:0"><span class="eyebrow__dot"></span>Ce que tu développes</p>
+          <h2 class="reveal" style="--d:1">Des qualités<br><span class="serif">pour longtemps.</span></h2>
+          <p class="lead reveal" style="--d:2">Bien au-delà de l'option : des gestes et des réflexes utiles dans toutes les spécialités, et dans la vie.</p>
+          <p class="skills__quote reveal" style="--d:3">« On n'apprend pas la technologie en la regardant : on la pratique. »</p>
+        </div>
+
+        <ul class="bars">
+          <li class="reveal" style="--d:1">
+            <div class="bars__label"><span>Créativité</span><span class="bars__hint">Oser des idées</span></div>
+            <div class="bars__track"><span style="--val:86%"></span></div>
+          </li>
+          <li class="reveal" style="--d:2">
+            <div class="bars__label"><span>Esprit critique</span><span class="bars__hint">Questionner, argumenter</span></div>
+            <div class="bars__track"><span style="--val:78%"></span></div>
+          </li>
+          <li class="reveal" style="--d:3">
+            <div class="bars__label"><span>Travail en équipe</span><span class="bars__hint">Écouter, partager, décider</span></div>
+            <div class="bars__track"><span style="--val:92%"></span></div>
+          </li>
+          <li class="reveal" style="--d:4">
+            <div class="bars__label"><span>Autonomie</span><span class="bars__hint">Chercher, se tromper, ajuster</span></div>
+            <div class="bars__track"><span style="--val:84%"></span></div>
+          </li>
+          <li class="reveal" style="--d:5">
+            <div class="bars__label"><span>Culture technique</span><span class="bars__hint">Comprendre les systèmes</span></div>
+            <div class="bars__track"><span style="--val:88%"></span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 — APRÈS -->
+  <section class="slide" data-chapter="Et après ?" data-theme="light" data-tint="#2C5BD0">
+    <div class="slide__inner">
+      <header class="head reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>Et après la seconde ?</p>
+        <h2>Un déclic,<br><span class="serif">pas une case obligatoire.</span></h2>
+        <p class="lead">L'option ne conditionne pas ton choix de spécialités. Elle t'aide surtout à te connaître et à choisir en connaissance de cause.</p>
+      </header>
+
+      <div class="paths">
+        <article class="path reveal" style="--d:1">
+          <p class="path__num">01</p>
+          <h3>Poursuivre en spécialités</h3>
+          <p>Mathématiques, physique-chimie, NSI, sciences de l'ingénieur… selon l'offre de ton établissement.</p>
+          <p class="path__note">Pour approfondir l'analyse et le numérique.</p>
+        </article>
+        <article class="path reveal" style="--d:2">
+          <p class="path__num">02</p>
+          <h3>Choisir la voie technologique</h3>
+          <p>La série STI2D prolonge naturellement la démarche : concevoir, expérimenter, innover.</p>
+          <p class="path__note">Pour apprendre par la pratique et le projet.</p>
+        </article>
+        <article class="path reveal" style="--d:3">
+          <p class="path__num">03</p>
+          <h3>Se projeter dans le supérieur</h3>
+          <p>BUT, BTS, écoles d'ingénieurs, classes préparatoires : les chemins sont nombreux et ouverts.</p>
+          <p class="path__note">Un premier aperçu des métiers de l'ingénierie.</p>
+        </article>
+      </div>
+
+      <p class="footnote reveal" style="--d:4">L'important n'est pas de tout décider en seconde — c'est d'essayer pour de vrai.</p>
+    </div>
+  </section>
+
+  <!-- 10 — QUIZ -->
+  <section class="slide slide--quiz" data-chapter="Quiz" data-theme="light" data-tint="#F2B841">
+    <div class="slide__inner">
+      <header class="head head--center reveal" style="--d:0">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>À toi de jouer</p>
+        <h2>Quel <span class="serif">réflexe</span> d'ingénieur as-tu ?</h2>
+        <p class="lead">Quatre questions, zéro note. Clique sur la réponse qui te semble juste.</p>
+      </header>
+
+      <div class="quiz reveal" style="--d:1" id="quiz" aria-live="polite">
+        <div class="quiz__top">
+          <span class="quiz__progress" id="quizProgress">Question 1 / 4</span>
+          <span class="quiz__score" id="quizScore">0 point</span>
+        </div>
+        <div class="quiz__bar" aria-hidden="true"><span id="quizBar"></span></div>
+        <div id="quizBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 — PRATIQUE -->
+  <section class="slide" data-chapter="En pratique" data-theme="light" data-tint="#163A8A">
+    <div class="slide__inner">
+      <div class="practical">
+        <div>
+          <p class="eyebrow reveal" style="--d:0"><span class="eyebrow__dot"></span>En pratique</p>
+          <h2 class="reveal" style="--d:1">Comment<br><span class="serif">choisir l'option ?</span></h2>
+
+          <ul class="checklist">
+            <li class="reveal" style="--d:2"><span class="check">✓</span><div><strong>En classe de seconde</strong><p>Un enseignement optionnel, en plus des matières obligatoires.</p></div></li>
+            <li class="reveal" style="--d:3"><span class="check">✓</span><div><strong>1 h 30 par semaine</strong><p>Des projets et des travaux pratiques.</p></div></li>
+            <li class="reveal" style="--d:4"><span class="check">✓</span><div><strong>Au moment des vœux</strong><p>Le choix de l'option s'exprime lors de l'inscription en seconde.</p></div></li>
+            <li class="reveal" style="--d:5"><span class="check">✓</span><div><strong>Sans prérequis</strong><p>La curiosité suffit : les outils s'apprennent dans le projet.</p></div></li>
+          </ul>
+        </div>
+
+        <aside class="contact reveal" style="--d:3">
+          <h3>Une question ?</h3>
+          <p>L'équipe de sciences et technologies vous répond.</p>
+
+          <address>
+            <p><strong>Institution Saint Jean</strong><br>246 rue Saint Jean<br>59506 Douai Cedex</p>
+            <p><a href="tel:+33327944660">03 27 94 46 60</a></p>
+            <p><a href="https://www.stjean-douai.eu" target="_blank" rel="noopener">stjean-douai.eu</a></p>
+          </address>
+
+          <a class="btn btn--ghost" href="https://www.stjean-douai.eu/lycee/notre-offre-doptions-des-la-2nde/sciences-lringenieur-creation-innovation-technologique-html/" target="_blank" rel="noopener">
+            Voir la page de l'option
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 — MERCI -->
+  <section class="slide slide--end" data-chapter="Merci" data-theme="dark">
+    <div class="slide__inner">
+      <div class="end">
+        <p class="eyebrow eyebrow--light reveal" style="--d:0"><span class="eyebrow__dot"></span>Institution Saint Jean · Douai</p>
+        <h2 class="reveal" style="--d:1">À bientôt<br><span class="serif">dans le labo.</span></h2>
+        <p class="lead reveal" style="--d:2">Sciences de l'Ingénieur &amp; Création et Innovation Technologique — option de seconde.</p>
+
+        <p class="end__baseline reveal" style="--d:4">Cultivons <em>l'épanouissement</em></p>
+
+        <div class="end__actions reveal" style="--d:5">
+          <a class="btn btn--primary" href="#/1">Revenir au début</a>
+          <a class="btn btn--ghost btn--ghost-light" href="https://www.stjean-douai.eu" target="_blank" rel="noopener">Site de l'établissement</a>
+        </div>
+      </div>
+
+      <div class="arcs arcs--end" aria-hidden="true">
+        <svg viewBox="0 0 600 600" fill="none">
+          <g stroke-linecap="round">
+            <circle cx="300" cy="300" r="270" stroke="#2C5BD0" stroke-width="6" stroke-dasharray="640 200" transform="rotate(150 300 300)"/>
+            <circle cx="300" cy="300" r="225" stroke="#7B3FB0" stroke-width="6" stroke-dasharray="560 260" transform="rotate(150 300 300)"/>
+            <circle cx="300" cy="300" r="180" stroke="#3FA24B" stroke-width="6" stroke-dasharray="460 260" transform="rotate(150 300 300)"/>
+            <circle cx="300" cy="300" r="135" stroke="#24ADA3" stroke-width="6" stroke-dasharray="360 220" transform="rotate(150 300 300)"/>
+            <circle cx="300" cy="300" r="250" stroke="#F07C22" stroke-width="6" stroke-dasharray="300 500" transform="rotate(-25 300 300)"/>
+            <circle cx="300" cy="300" r="295" stroke="#F2B841" stroke-width="6" stroke-dasharray="260 540" transform="rotate(-25 300 300)"/>
+            <circle cx="300" cy="300" r="320" stroke="#EE7FA5" stroke-width="6" stroke-dasharray="200 560" transform="rotate(-25 300 300)"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="hud">
+  <div class="hud__left">
+    <a class="hud__home" href="#/1" aria-label="Accueil">⌂</a>
+    <span class="hud__name">SI <span aria-hidden="true">·</span> CIT</span>
+  </div>
+
+  <div class="hud__right">
+    <span class="hud__count"><span id="currentNum">01</span><span class="hud__count-sep">/</span><span id="totalNum">12</span></span>
+    <button class="navbtn" id="btnPrev" type="button" aria-label="Diapositive précédente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button class="navbtn navbtn--next" id="btnNext" type="button" aria-label="Diapositive suivante">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</footer>
+
+<!-- SOMMAIRE -->
+<div class="overlay" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
+  <div class="overlay__scrim" data-close></div>
+  <div class="menu">
+    <div class="menu__head">
+      <div>
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>Sommaire</p>
+        <h2 id="menuTitle">La visite,<br><span class="serif">en un coup d'œil.</span></h2>
+      </div>
+      <button class="iconbtn iconbtn--light" type="button" data-close aria-label="Fermer le sommaire">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <ol class="menu__list" id="menuList"></ol>
+    <div class="menu__foot">
+      <span>Institution Saint Jean Douai — option SI / CIT</span>
+      <span class="menu__keys"><kbd>←</kbd> <kbd>→</kbd> naviguer · <kbd>M</kbd> sommaire · <kbd>F</kbd> plein écran</span>
+    </div>
+  </div>
+</div>
+
+<!-- AIDE -->
+<div class="overlay" id="help" role="dialog" aria-modal="true" aria-labelledby="helpTitle" hidden>
+  <div class="overlay__scrim" data-close></div>
+  <div class="helpbox">
+    <div class="menu__head">
+      <div>
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>Aide</p>
+        <h2 id="helpTitle">Raccourcis<br><span class="serif">&amp; navigation.</span></h2>
+      </div>
+      <button class="iconbtn iconbtn--light" type="button" data-close aria-label="Fermer l'aide">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <dl class="keys">
+      <div><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>Diapositive précédente / suivante</dd></div>
+      <div><dt><kbd>Espace</kbd></dt><dd>Avancer</dd></div>
+      <div><dt><kbd>Début</kbd> <kbd>Fin</kbd></dt><dd>Première / dernière diapositive</dd></div>
+      <div><dt><kbd>M</kbd></dt><dd>Ouvrir le sommaire</dd></div>
+      <div><dt><kbd>F</kbd></dt><dd>Plein écran</dd></div>
+      <div><dt><kbd>?</kbd></dt><dd>Cette aide</dd></div>
+    </dl>
+    <p class="helpbox__touch">Sur tablette ou téléphone : balaie horizontalement pour changer de diapositive.</p>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
