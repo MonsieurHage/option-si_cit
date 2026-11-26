@@ -116,6 +116,9 @@ body.is-dark .topbar::after{background:linear-gradient(to right,transparent,rgba
   transition:background .4s;
 }
 .topbar__actions{margin-left:auto;display:flex;gap:6px}
+.learning-entry{display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;margin-right:6px;border:1px solid currentColor;border-radius:9px;font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap}
+.learning-entry:hover{background:rgba(44,91,208,.12)}
+@media(max-width:520px){.learning-entry{font-size:.75rem;padding:6px 9px;margin-right:0}.topbar__actions{gap:1px}}
 
 .iconbtn{
   width:38px;height:38px;display:grid;place-items:center;
@@ -876,3 +879,4 @@ body.is-dark :focus-visible,.overlay :focus-visible{outline-color:var(--yellow)}
   .slide__inner{min-height:0}
   .reveal{opacity:1;animation:none}
 }
+
