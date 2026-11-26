@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>L’atelier SI · Analyser un système · Monsieur Hage</title>
+  <meta name="description" content="Un parcours interactif de seconde SI/CIT : comprendre un système, explorer une lampe, classer les fonctions, identifier les flux et vérifier des exigences.">
+  <meta name="theme-color" content="#12366a">
+  <link rel="icon" type="image/svg+xml" href="assets/atelier.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="logic.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="mobile-bar">
+    <a class="mobile-brand" href="#accueil"><img src="assets/saint-jean-logo.webp" alt="Saint Jean Douai" width="474" height="437"><span>L’atelier <b>SI</b></span></a>
+    <button class="icon-button" id="menu-toggle" aria-label="Ouvrir le parcours" aria-controls="sidebar" aria-expanded="false"><span class="menu-lines" aria-hidden="true"></span></button>
+  </div>
+  <button class="nav-scrim" id="nav-scrim" hidden aria-label="Fermer le parcours"></button>
+  <aside class="sidebar" id="sidebar" aria-label="Navigation du parcours">
+    <a class="brand" href="#accueil"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 28V12l12-6 12 6v16l-12 6Z"/><path d="m8 12 12 7 12-7M20 19v15"/></svg></span><span>L’atelier <b>SI</b><small>Observer. Comprendre. Concevoir.</small></span></a>
+    <a class="school" href="https://www.stjean-douai.eu" target="_blank" rel="noopener"><img src="assets/saint-jean-logo.webp" alt="Saint Jean Douai - Cultivons l’épanouissement" width="474" height="437"><span>Institution Saint Jean<small>Douai</small></span></a>
+    <div class="nav-label">MON PARCOURS</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-bottom">
+      <div class="progress-label"><b>Votre progression</b><span id="progress-count">0 / 6</span></div>
+      <progress id="course-progress" value="0" max="6" aria-label="Missions terminées"></progress>
+      <p id="save-status">Enregistrée sur cet appareil</p>
+      <div class="teacher"><img src="assets/saint-jean-blason.webp" alt="Blason de l’Institution Saint Jean Douai" width="750" height="849"><span><b>Monsieur Hage</b><small>Option SI / CIT · Seconde</small></span></div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="breadcrumb"><a href="../../index.html">Option SI / CIT</a><span>/</span><span>Analyser un système</span></div>
+      <div class="topbar-actions"><span class="level-label">Seconde</span><span class="xp-pill"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m11 2-7 9h5l-1 7 8-10h-5Z"/></svg><b id="xp-count">0 XP</b></span><button class="icon-button" id="settings-open" aria-label="Ouvrir les options"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="8" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></svg></button></div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="site-footer"><span>Institution Saint Jean Douai · Monsieur Hage</span><div><button class="text-button" id="journal-footer">Mon carnet</button><button class="text-button" id="sources-open">Sources et fonctionnement</button></div></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <div class="dialog-heading"><h2 id="settings-title">Votre espace de travail</h2><button class="icon-button" data-close aria-label="Fermer les options">×</button></div>
+    <p>La progression et le carnet sont conservés dans ce navigateur. Sur un poste partagé, exportez votre travail avant de partir.</p>
+    <label class="setting"><span>Limiter les animations</span><input type="checkbox" id="motion-toggle"></label>
+    <button class="button button-secondary" id="export-journal">Exporter mon carnet (.txt)</button>
+    <button class="text-button danger" id="reset-progress">Effacer ma progression</button>
+    <div id="reset-confirm" hidden><p><b>Cette action efface uniquement votre travail sur cet appareil.</b></p><div class="button-row"><button class="button danger-button" id="confirm-reset">Confirmer l’effacement</button><button class="button button-secondary" id="cancel-reset">Annuler</button></div></div>
+  </dialog>
+  <dialog id="sources-dialog" aria-labelledby="sources-title">
+    <div class="dialog-heading"><h2 id="sources-title">Sources et fonctionnement</h2><button class="icon-button" data-close aria-label="Fermer les sources">×</button></div>
+    <p>Parcours de seconde SI/CIT conçu autour du module « Analyser un système » de Monsieur Hage. Les valeurs des exemples constituent des données d’étude, pas les résultats d’un essai réel.</p>
+    <ul class="source-list"><li><a href="https://www.education.gouv.fr/bo/19/Special1/MENE1901570A.htm" target="_blank" rel="noopener">Programme officiel de seconde SI/CIT</a></li><li><a href="https://eduscol.education.fr/document/22498/download" target="_blank" rel="noopener">Ressources d’accompagnement Éduscol</a></li><li>Illustration de la lampe : visualisation du concept ÉCLIPSE. Les composants sont repérés dans une représentation d’étude.</li><li>Logos : Institution Saint Jean Douai, fournis par l’enseignant.</li><li>Vidéos : capsules animées originales, sans bande sonore, avec texte et transcription.</li></ul>
+    <p>Fonctionnement sans compte élève, sans publicité et sans envoi du carnet à un serveur. L’entraînement est libre. Les points de progression ne constituent pas une note scolaire.</p>
+  </dialog>
+  <noscript><p class="noscript">Activez JavaScript pour accéder aux activités. Les capsules et le cours nécessitent les fichiers du dossier complet.</p></noscript>
+</body>
+</html>

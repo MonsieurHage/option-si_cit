@@ -1,0 +1,10 @@
+{
+  "name": "saint-jean-atelier-si",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Parcours interactif de seconde SI/CIT - Monsieur Hage",
+  "scripts": {
+    "test": "node --test tests/logic.test.cjs",
+    "build": "python3 tools/build.py"
+  }
+}
