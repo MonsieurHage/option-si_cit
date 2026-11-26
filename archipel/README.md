@@ -22,7 +22,9 @@ Le site comprend aussi six notions expliquées, 22 questions corrigées réparti
 
 ## Tester sans installation
 
-Télécharger le dépôt, puis ouvrir `validation/Archipel_SI_Apercu.html` dans un navigateur récent prenant en charge WebGL 2. Ce fichier inclut le moteur et les médias, sans appel à un CDN. Il ne publie aucun site.
+Télécharger `validation/Archipel_SI_Apercu.html`, puis l’ouvrir dans Chrome, Edge, Firefox ou Safari récent. Depuis un dossier de téléchargements, utiliser au besoin « Ouvrir avec » puis sélectionner le navigateur. Le lecteur de pièces jointes ne remplace pas un navigateur pour ce jeu.
+
+Le fichier inclut le moteur et les médias, sans appel à un CDN. La 3D nécessite WebGL 2 ; si ce rendu est indisponible, les cours et les vidéos restent accessibles. Aucune installation ni publication n’est nécessaire.
 
 Les deux logos de Saint Jean et la signature « Monsieur Hage » figurent dans l’interface. Les personnages et les décors sont des créations géométriques originales.
 
@@ -44,8 +46,8 @@ Dans ce dossier, avec Node.js récent :
 
 ```sh
 npm ci
-npm test
 npm run build
+npm test
 ```
 
 Le moteur compilé est produit dans `assets/game.js`. Le dossier `dist`, généré et ignoré par Git, constitue la copie statique pour aperçu. Le fichier autonome de validation est régénéré dans `validation`.
@@ -80,7 +82,7 @@ Les XP récompensent les missions terminées et ne constituent pas une note. Les
 
 ## Validation avant publication
 
-Les tests couvrent les règles de progression, les erreurs, le parcours complet, les QCM, la reprise, les manipulations et la structure géométrique du monde. Les tests du moteur utilisent un rendu substitué : ils ne certifient pas le rendu WebGL réel.
+Les tests couvrent les règles de progression, les erreurs, le parcours complet, les QCM, la reprise, les manipulations et la structure géométrique du monde. Ils vérifient aussi le fichier HTML réellement livré : intégrité du moteur inclus, syntaxe du programme, médias autonomes et démarrage des ressources en mode sans WebGL. Les tests du moteur utilisent un rendu substitué : ils ne certifient pas le rendu WebGL réel.
 
 Le service d’aperçu distant est indisponible dans l’environnement de travail. Le contrôle visuel final et la fluidité sur ordinateur et téléphone restent à vérifier dans un navigateur réel, à l’aide du fichier autonome.
 

@@ -1,6 +1,6 @@
 # Version de validation - L’Archipel des ingénieurs
 
-1. Ouvrir `validation/Archipel_SI_Apercu.html` puis commencer l’aventure.
+1. Télécharger `validation/Archipel_SI_Apercu.html`, l’ouvrir depuis les téléchargements dans un navigateur récent, puis commencer l’aventure.
 2. Déplacer l’avatar, sauter, tourner la caméra et ouvrir la carte.
 3. Parler à Camille et justifier le besoin.
 4. Inspecter les cinq composants et répondre aux questions.
@@ -15,6 +15,6 @@
 
 Le mode économique et les animations réduites sont accessibles dans les options. Le bouton Repère facilite les déplacements sans résoudre la question technique.
 
-Les tests automatisés contrôlent la logique, les interfaces simulées et la structure du monde. Ils ne remplacent pas un essai visuel du rendu WebGL sur un appareil réel.
+Les tests automatisés contrôlent la logique, les interfaces simulées, la structure du monde et le fichier HTML livré lui-même. La syntaxe de son programme, l’intégrité du moteur inclus et l’ouverture des cours et vidéos en mode sans WebGL sont vérifiées. Ils ne remplacent pas un essai visuel du rendu WebGL sur un appareil réel.
 
 Le premier projet reste séparé. La présente proposition n’est ni fusionnée ni publiée ; la validation explicite de Monsieur Hage est nécessaire avant production.

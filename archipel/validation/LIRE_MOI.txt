@@ -1,0 +1,23 @@
+L’ARCHIPEL DES INGÉNIEURS — APERÇU CORRIGÉ
+Institution Saint Jean Douai — Monsieur Hage
+
+1. Téléchargez Archipel_SI_Validation.zip sur votre ordinateur.
+2. Extrayez le contenu de l’archive (Windows : clic droit, Extraire tout).
+3. Ouvrez Archipel_SI_Apercu.html avec Chrome, Edge, Firefox ou Safari récent.
+   Si nécessaire : clic droit sur le fichier, Ouvrir avec, puis choisir le navigateur.
+
+Le lecteur de pièces jointes de ChatGPT ou Teams ne lance pas ce jeu.
+Aucune installation et aucune connexion à un compte élève ne sont nécessaires.
+Le fichier contient le programme, les logos et les trois vidéos.
+
+Cliquez sur « Commencer l’aventure ».
+Déplacement : ZQSD, WASD ou flèches. E : interagir. Espace : sauter.
+Clic droit et déplacement : tourner la caméra. « Repère » : rejoindre un objectif.
+Les cours, les vidéos et la carte sont accessibles en haut de l’écran.
+
+Si la 3D est indisponible : un message s’affiche et les cours restent accessibles.
+Le rendu 3D nécessite WebGL 2 et une accélération graphique disponible dans le navigateur.
+La progression est conservée dans ce navigateur ; exportez le carnet en fin de travail.
+
+Cette version est un prototype en attente de validation avant mise en production.
+La correction porte sur une erreur de génération du fichier HTML autonome.
